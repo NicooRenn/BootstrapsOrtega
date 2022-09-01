@@ -1,0 +1,76 @@
+/*Abre background logo*/
+  .header, nav, ul{
+	list-style: none;
+	font-size: 25px;}
+	.header {
+		background-image: url(../assets/img/fondoladrillos.jpg);
+	}
+/*Cierra background logo*/
+
+/*Abre Animaciones h1*/
+ :root {
+  --bg-color: hsl(49 100% 100%);
+  --typewriterSpeed: 3s;
+  --typewriterCharacters: 24;
+ }
+	.Title {
+	font-size: clamp(1rem, 3vw + 1rem, 4rem);
+	position: relative;
+	font-family: "Source Code Pro", monospace;
+	position: relative;
+	width: max-content;
+	}
+
+	.Title:before,
+	.Title:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	}
+
+	.Title:before {
+	background: var(--bg-color);
+	animation: typewriter var(--typewriterSpeed)
+	  steps(var(--typewriterCharacters)) 1s forwards;
+	}
+
+	.Title:after {
+	width: 0.125em;
+	background: black;
+	animation: typewriter var(--typewriterSpeed)
+		steps(var(--typewriterCharacters)) 1s forwards,
+	  blink 750ms steps(var(--typewriterCharacters)) infinite;
+	}
+
+
+	@keyframes typewriter {
+	to {
+	  left: 100%;
+	}
+	}
+
+	@keyframes blink {
+	to {
+	  background: transparent;
+	}
+	}
+
+	@keyframes fadeInUp {
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+	}
+/*Cierra Animaciones h1*/
+.Center {margin-bottom: 25px;}
+/*Abre media screen y max ancho*/
+	@media screen and (max-width: 500px) {
+		.iframe {
+                    max-width: 100% ;
+                    width: auto;
+                    height: auto;
+				}	
+			}
